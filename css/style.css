@@ -1,0 +1,1138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #111827;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/*Контейнер*/
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/*НАВИГАЦИЯ*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: all 0.2s;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 14px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, #D80D07, #EA580C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    color: #D80D07;
+    border-bottom: 2px solid #D80D07;
+    padding-bottom: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.nav-links li {
+    display: flex;
+    align-items: center; 
+}
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #1F2937;
+    transition: 0.2s;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #D80D07;
+}
+.nav-links a.active {
+    color: #D80D07;
+    border-bottom: 2px solid #D80D07;
+    padding-bottom: 2px;
+}
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo span {
+    color: #1E293B;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+.nav-contact-item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.nav-contact-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+}
+
+.nav-phone,
+.nav-email {
+    font-weight: 500;
+    color: #1F2937;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.nav-call-btn {
+    background: #D80D07;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(249,115,22,0.2);
+}
+
+.nav-call-btn:hover {
+    background: #FF0700;
+    transform: translateY(-2px);
+}
+
+/* бургер для мобильных */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #D80D07;
+}
+
+/* главный отступ чтобы контент не уходил под меню */
+main {
+    margin-top: 80px;
+}
+
+/* общие секции */
+section {
+    padding: 20px 0;
+}
+.section-title {
+    width: fit-content;
+    padding: 8px 20px;
+    margin: 0 0 30px 0;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: -0.02em;
+}
+.section-sub {
+    text-align: center;
+    color: #4B5563;
+    max-width: 700px;
+    margin: -20px auto 48px auto;
+}
+
+/* главная */
+.hero {
+    padding: 4% 0% 6%;
+}
+.hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.hero-content {
+    flex: 1;
+    margin-right: 10%;
+}
+.hero-badge {
+    background: #FFEDD5;
+    color: #D80D07;
+    display: inline-block;
+    padding: 3px 14px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 20px 0px;
+    color: #0F172A;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    color: #334155;
+    margin-bottom: 15px;
+}
+.btn-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.btn-primary {
+    background: #D80D07;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(249,115,22,0.2);
+}
+.btn-primary:hover {
+    background: #FF0700;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px -12px rgba(249,115,22,0.4);
+}
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #D80D07;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #D80D07;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-outline:hover {
+    background: #D80D07;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.hero-stats {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #D80D07;
+    border-radius: 25px;
+    padding: 10px 0px;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.3);
+    justify-content: center;
+    margin-top: 0;
+}
+
+.hero-stats-wrapper {
+    flex: 0 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%; 
+}
+
+.hero-stats-img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 25px 25px 0 0; 
+    margin-bottom: 0;
+}
+.stat-item {
+    text-align: center;
+    min-width: 60px;
+}
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.stat-label {
+    font-weight: 500;
+    color: #ffffffdc;
+}
+.hero-stats-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px 20px 15px;
+    background: #D80D07; 
+    border-radius: 0 0 25px 25px; 
+    width: 100%;
+}
+/* карточки услуг */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+.service-card {
+    background: #D80D07;
+    color: #ffffff;
+    border-radius: 28px;
+    padding: 0px 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
+    border: 1px solid #F1F5F9;
+}
+.service-icon h3{
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+}
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.service-card p {
+    color: #ffffff;
+}
+
+/* Заголовки в колонке преимуществ */
+.benefits-title-primary {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #D80D07;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.benefits-title-secondary {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: -0.02em;
+    border-left: 4px solid #D80D07;
+    padding-left: 16px;
+}
+
+/* Двухколоночный список "С чем я могу помочь?" */
+.benefits-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.benefits-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 3px;
+    font-size: 1rem;
+    line-height: 1.3;
+    background-color: #D80D07;
+    color: #ffffff;
+    padding: 8px 0px;
+    border-bottom: 1px solid #F1F5F9;
+    border-radius: 10px;
+}
+
+.benefit-number {
+    flex-shrink: 0;
+    width: 44px;
+    font-weight: 800;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #D80D07;
+    padding: 0% 1% 0% 2%;
+    margin: 0.5% 5% 0% 1.5%;
+    border-radius: 5px;
+}
+
+.benefit-text {
+    flex: 1;
+    padding: 1% 0% 1% 1%;
+    margin-left: 2%;
+}
+
+/* шаги работы */
+.steps {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.step-arrow {
+    flex: 0 0 auto;
+    font-size: 2rem;
+    color: #D80D07;
+    font-weight: bold;
+}
+.step {
+    flex: 1;
+    min-width: 180px;
+    border-radius: 32px;
+    padding: 28px 20px;
+    text-align: center;
+}
+.step-number {
+    background: #D80D07;
+    width: 48px;
+    height: 48px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/*карусель отзывов*/
+.reviews-carousel {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;        
+    margin: 0 auto;
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.review-card {
+    flex: 0 0 auto;
+    width: 45%;            
+    margin: 20px 50px 20px 50px;      
+    background: #e3e4e5;
+    border-radius: 15px;
+    padding: 28px;
+    transition: background 0.2s;
+    box-sizing: border-box;
+}
+
+.review-card:hover {
+    background: #FFF7ED;
+}
+/* отзывы */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Индикаторы */
+.reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.reviews-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #CBD5E1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reviews-dot.active {
+    background-color: #D80D07;
+    transform: scale(1.2);
+}
+
+/* преимущества иконки */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 32px;
+    margin-top: 20px;
+}
+.benefit {
+    text-align: center;
+    padding: 20px;
+}
+.benefit h4 {
+    font-size: 1.3rem;
+    margin: 16px 0 8px;
+}
+
+/* FAQ */
+.faq-list{
+    margin-top: 20px;
+}
+.faq-item {
+    background: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    border: 2px solid #e3e4e5;
+    background: #e3e4e5;
+    cursor: pointer5;
+    transition: 0.2s;
+}
+.faq-question {
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: #4B5563;
+    margin-top: 8px;
+}
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    margin-top: 16px;
+}
+
+/* форма */
+.contact-form {
+    height: 100%;         
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.contact-form .benefits-title-secondary{
+    color: #ffffff;
+    border-left: 4px solid #ffffff;
+}
+
+.contact-form .form-fields {
+    max-width: 600px;
+    margin: 0;            
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-top: 10px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contact-form .form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+.contact-form .form-group select:focus {
+    outline: none;
+    border-color: #D80D07;
+    box-shadow: 0 0 0 3px rgba(216, 13, 7, 0.1);
+}
+
+.contact-form .form-group select:hover {
+    border-color: #D80D07;
+}
+
+/* Стиль для опций (опционально) */
+.contact-form .form-group select option {
+    padding: 12px;
+    font-size: 0.85rem;
+}
+
+.form-fields{
+    box-shadow: 20px 20px 20px -8px rgba(255, 255, 255, 0.5);
+    
+}
+
+.contact-form .form-group {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #1F2937;
+    font-size: 0.9rem;
+}
+
+.contact-form .form-group .required {
+    color: #D80D07;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    outline: none;
+    border-color: #D80D07;
+    box-shadow: 0 0 0 3px rgba(216,13,7,0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.checkbox-group input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: #D80D07;
+}
+
+.checkbox-group label {
+    font-size: 0.7rem;
+    color: #4B5563;
+    line-height: 1.4;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 5px 0 5px;
+}
+
+.form-actions .btn-primary,
+.form-actions .btn-outline {
+    padding: 12px 32px;
+    font-size: 1rem;
+}
+
+.form-group input {
+    padding: 14px 24px;
+    border-radius: 60px;
+    border: 1px solid #E2E8F0;
+    min-width: 260px;
+    font-size: 1rem;
+}
+.contact-two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: stretch;
+    background: #D80D07;
+    padding: 3% 5%;
+    border-radius: 25px;
+}
+
+.contact-right {
+    width: 420px;         
+    flex-shrink: 0;       
+    min-width: 280px;
+}
+
+.contact-left {
+    flex: 1;
+    min-width: 260px;
+}
+
+.contact-slogan {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0F172A;
+    letter-spacing: -0.02em;
+    background: #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.mini-slogan{
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #0F172A;
+    background: linear-gradient(135deg, #ffffff, #ffd3d3, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 20px;
+}
+.contact-info-cards {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 60%;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    padding: 2%;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background: #D80D07;
+    border-radius: 25px;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #D80D07;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1F2937;
+    word-break: break-word;
+}
+footer {
+    background: #0F172A;
+    color: #CBD5E1;
+    padding: 40px 0;
+    text-align: left;
+}
+footer .grow_link{
+    color: #CBD5E1;
+}
+
+/* кнопка наверх */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 52px;
+    height: 52px;
+    border-radius: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    border: none;
+    background-image: url('../image/strelka_1.png'); 
+    background-size: contain;      
+    outline: none;          
+    border: none;           
+    background-color: transparent;  
+    background-size: contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.scroll-top:focus {
+    outline: none;
+    box-shadow: none;       
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background-image: url('../image/strelka_2.png'); 
+}
+
+/* анимация появления */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.6s ease;
+}
+.fade-up.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        margin-right: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    .hero-stats-wrapper {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .benefits-two-columns {
+        gap: 24px;
+    }
+
+    .benefit-item {
+        padding: 6px 0;
+    }
+
+    .benefit-number {
+        width: 36px;
+        font-size: 0.9rem;
+        margin: 0.5% 3% 0% 1.5%;
+    }
+
+    .benefit-text {
+        font-size: 0.95rem;
+    }
+
+    .steps {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    .step {
+        padding: 20px 12px;
+        min-width: 0;
+    }
+    .step h3 {
+        font-size: 1rem;
+    }
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    .step-arrow {
+        font-size: 1.6rem;
+    }
+    .reviews-carousel {
+        max-width: 680px;    
+    }
+    .review-card {
+        width: calc((100% - 2 * 16px) / 2.3);
+        padding: 24px;
+        margin-right: 16px;
+    }
+    .contact-right {
+        width: 100%;      
+    }
+    .contact-two-columns {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 860px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        border-radius: 24px;
+        margin-top: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    /* Контактный блок в мобильной версии */
+    .nav-contact-stack {
+        align-items: center;
+    }
+
+    .nav-phone,
+    .nav-email {
+        font-size: 0.8rem;
+        white-space: normal;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .nav-contact-item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-call-btn {
+        width: 80%;
+        margin-top: 5px;
+    }
+}
+@media (max-width: 768px) {
+    .hero-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin: 20px 0px;
+        color: #0F172A;
+    }
+    .hero-stats {
+        padding: 16px;
+        gap: 12px;
+    }
+    .hero-stats-wrapper {
+        width: 80%;
+        flex: none;
+    }
+    .hero-stats-content {
+        flex-wrap: nowrap;      
+        gap: 8px;
+        padding: 8px 10px 12px;
+    }
+    .stat-item {
+        min-width: auto;        
+    }
+    .stat-number {
+        font-size: 1.2rem;      
+        line-height: 1;
+    }
+    .stat-label {
+        font-size: 0.65rem;     
+    }
+    .hero-stats-img {
+        border-radius: 30px 30px 0 0;
+    }
+    .benefits-two-columns {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .benefit-item {
+        gap: 12px;
+        padding: 6px 0;
+    }
+    
+    .benefit-number {
+        width: 36px;
+        font-size: 1rem;
+    }
+    .benefit-text {
+        font-size: 0.95rem;
+        padding: 1% 1.5% 1% 1%;
+    }
+    .btn-group{
+        display: flex;
+        justify-content: center;
+    }
+    .steps {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .step{
+        padding: 0px 0px;
+    }
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    .reviews-carousel {
+        max-width: 420px;    
+    }
+    .review-card {
+        width: calc((100% - 16px) / 1.3);
+        padding: 20px;
+        margin-right: 16px;
+    }
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-actions .btn-primary,
+    .form-actions .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-two-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: auto;
+        width: 100%;
+    }
+
+    .contact-slogan {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .contact-info-cards {
+        margin-top: 25px;
+        gap: 15px;
+        max-width: 100%;
+    }
+    .contact-form .form-group {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .contact-form .form-group select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        font-size: 0.85rem;
+        background-size: 14px;
+        background-position: right 12px center;
+    }
+    
+    .info-card {
+        padding: 12px 16px;
+    }
+    
+    .info-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .info-value {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .hero-stats {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 8px;
+        padding: 12px;
+    }
+    .logo-img {
+        height: 32px;
+    }
+    .hero-stats-content {
+        gap: 15px;
+        padding: 6px 0px 10px;
+    }
+
+    .stat-number {
+        font-size: 1rem;
+    }
+
+    .stat-label {
+        font-size: 0.6rem;
+    }
+    .contact-slogan {
+        font-size: 1.8rem;
+    }
+    .contact-form .form-group select {
+        padding: 10px 12px;
+        width: 100%;
+        font-size: 16px;
+        background-size: 12px;
+        background-position: right 10px center;
+    }
+}

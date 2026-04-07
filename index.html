@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Автоматизация производства профнастила и металлочерепицы | IT-АРХИТЕКТОР</title>
+    <meta name="description" content="Автоматизация производства профнастила и металлочерепицы в 1С. Управляйте производством без Excel и бумажек. Первый час бесплатно. Без предоплаты.">
+    <meta name="keywords" content="автоматизация производства, 1С производство, профнастил, металлочерепица, 1С УНФ">
+    <!-- для соцсетей-->
+    <meta property="og:title" content="IT-АРХИТЕКТОР - Автоматизация производства">
+    <meta property="og:description" content="Автоматизация производства профнастила и металлочерепицы в 1С. Без предоплаты, с гарантией 365 дней.">
+    <meta property="og:image" content="image/logo.png">
+    
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="https://it-architector.com/ru" class="logo" target="_blank" rel="noopener noreferrer">
+                    <img src="image/logo_name.png" alt="Логотип IT-АРХИТЕКТОР" class="logo-img">
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a data-scroll="start">Решение</a></li>
+                <li><a data-scroll="services">Об услуге</a></li>
+                <li><a data-scroll="howwork">Процесс работы</a></li>
+                <li><a data-scroll="reviews">Отзывы</a></li>
+                <li><a data-scroll="faq">FAQ</a></li>
+                <li><a data-scroll="contacts">Контакты</a></li>
+                <li class="nav-contact-stack">
+                    <span class="nav-phone">+7 (347) 200-91-24</span>
+                    <span class="nav-email">info@ais-itgroup.ru</span>
+                </li>
+                <li class="nav-contact-item">
+                    <button class="nav-call-btn" id="navCallBtn">Заказать звонок</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="start">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">⚡ Первый час — бесплатно</div>
+                        <h1>Автоматизация производства профнастила и металлочерепицы</h1>
+                        <p>Управляйте производством напрямую из 1С — без Excel, бумажек и хаоса</p>
+                        <div class="btn-group">
+                            <button class="btn-primary" id="heroContactBtn">Оставить заявку</button>
+                            <button class="btn-outline" id="heroHowworkBtn">Как я работаю</button>
+                        </div>
+                    </div>
+                    <div class="hero-stats-wrapper">
+                        <a href="https://it-architector.com/ru" class="logo" target="_blank" rel="noopener noreferrer">
+                            <img src="image/start_image_hero.png" alt="Стартовое изображение" class="hero-stats-img">
+                        </a>
+                        <div class="hero-stats-content">
+                            <div class="stat-item">
+                                <div class="stat-number">0₽</div>
+                                <div class="stat-label">Без предопаты</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">365 дней</div>
+                                <div class="stat-label">Гарантия</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15 лет</div>
+                                <div class="stat-label">Опыта в 1С</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services">
+            <div class="container">
+                <div class="benefits-two-columns">
+                    <div class="benefits-column">
+                        <div class="benefits-title-primary">9 причин, почему стоит выбрать IT-АРХИТЕКТОР</div>
+                        <div class="benefits-title-secondary">С чем я могу помочь?</div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">01</span>
+                            <span class="benefit-text">Автоматизация полного производственного цикла — от приёма заказа до выпуска и отгрузки</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">02</span>
+                            <span class="benefit-text">Учёт по ширине, длине, цвету — автоматический пересчёт метража и количества</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">03</span>
+                            <span class="benefit-text">Справочник цветов — без дублирования номенклатуры при смене оттенков</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">04</span>
+                            <span class="benefit-text">Партионный учёт рулонного металла — списание без ошибок и потерь</span>
+                        </div>
+                    </div>
+                    <div class="benefits-column">
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">05</span>
+                            <span class="benefit-text">Автоматическое формирование производственных заказов по спецификациям</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">06</span>
+                            <span class="benefit-text">Контроль исполнения заказов — статус «Готов к отгрузке» ставится автоматически</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">07</span>
+                            <span class="benefit-text">Снижение времени на переналадку — за счёт систематизации прокатных заявок</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">08</span>
+                            <span class="benefit-text">Учёт по нескольким фирмам и площадкам — для холдингов и производств в разных цехах</span>
+                        </div>
+                        <div class="benefit-item fade-up">
+                            <span class="benefit-number">09</span>
+                            <span class="benefit-text">Печать актов и прокатных заявок прямо из 1С — без лишних движений</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как я работаю -->
+        <section id="howwork">
+            <div class="container">
+                <h2 class="benefits-title-secondary">Как мы работаем?</h2>
+                <div class="steps">
+                    <div class="step fade-up"><div class="step-number">1</div><h3>Анализ текущих процессов</h3> <!--<p>Опишите задачу простыми словами, что нужно сделать.</p>--> </div> 
+                    <div class="step-arrow">→</div><div class="step fade-up"><div class="step-number">2</div><h3>Установка и настройка решения</h3> <!--<p>Смотрю конфигурацию, версию, риски. Согласовываем сроки.</p>--> </div>
+                    <div class="step-arrow">→</div><div class="step fade-up"><div class="step-number">3</div><h3>Обучение сотрудников</h3> <!-- <p>Фиксируем цену заранее, без сюрпризов.</p> --> </div>
+                    <div class="step-arrow">→</div><div class="step fade-up"><div class="step-number">4</div><h3>Сопровождение и поддержка</h3> <!-- <p>Показываю промежуточный результат, если объёмная работа.</p> --> </div>
+                </div>
+                <p class="section-sub" style="margin-top: 40px;">Без предоплат — сначала результат, потом оплата</p>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews">
+            <div class="container">
+                <h2 class="benefits-title-secondary">Что говорят клиенты?</h2>
+                <div class="reviews-carousel">
+                    <div class="reviews-track">
+                        <!-- Отзывы будут динамически добавлены скриптом -->
+                        <div class="review-card fade-up">
+                            <p>⭐ 5.0 — "Благодаря профессиональной работе команды IT-Архитектора, мы смогли автоматизировать управление и учет на нашем предприятии. Консультанты помогли подобрать подходящий программный продукт от 1С и провели его демонстрацию, что значительно облегчило наш..."</p>
+                            <strong>Алмаев Ильшат, Аква Люкс</strong>
+                        </div>
+                        <div class="review-card fade-up">
+                            <p>⭐ 5.0 — "Очень доволен сотрудничеством с компанией IT-Архитектор. Они помогли нам подобрать подходящую конфигурацию для нашей компании и провели модификацию типового программного обеспечения 1С, что позволило учесть все наши специфические требования."</p>
+                            <strong>Стрельцов Сергей, Bashles</strong>
+                        </div>
+                        <div class="review-card fade-up">
+                            <p>⭐ 5.0 — "Сотрудничество с этой компанией приятное и эффективное. Специалисты компании провели обучение для наших сотрудников и ИТ-специалистов, что позволило нам быстро освоить новые инструменты и начать использовать их на практике."</p>
+                            <strong>Коткин Денис, Сервис-Автоматика</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-dots"></div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="benefits-title-secondary">Часто задаваемые вопросы</h2>
+                <div class="faq-list">
+                    <div class="faq-item"><div class="faq-question">Как проходит удалённая работа? <span>▼</span></div><div class="faq-answer">Созваниваемся, вы даёте доступ к рабочему месту или серверу. Я смотрю проблему в вашей базе, выполняю задачу — вы проверяете и оплачиваете.</div></div>
+                    <div class="faq-item"><div class="faq-question">Сколько времени занимает оценка задачи?<span>▼</span></div><div class="faq-answer">Часто 10–30 минут. Если нужно глубже — можем запросить доступ, оценка бесплатна.</div></div>
+                    <div class="faq-item"><div class="faq-question">Почему стоит обратиться к вам, если у меня уже есть штатный 1С-ник?<span>▼</span></div><div class="faq-answer">Закрываем срочные "горящие" задачи, сложные обновления, интеграции. Работаем как усиление.</div></div>
+                    <div class="faq-item"><div class="faq-question">Как выбрать конфигурацию 1С (УНФ, УТ, ERP)?<span>▼</span></div><div class="faq-answer">Зависит от сферы. Подскажем человеческим языком, исходя из ваших задач и бюджета.</div></div>
+                    <div class="faq-item"><div class="faq-question">Сколько стоит обновление 1С?<span>▼</span></div><div class="faq-answer">Цена зависит от конфигурации, доработок. Фиксируем до начала, работаем с резервной копией.</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <div class="container">
+                <div class="contact-two-columns">
+                    <!-- Левая колонка: крупный текст -->
+                    <div class="contact-left">
+                        <div class="contact-slogan">
+                            Готовы вывести свой бизнес на новый уровень?
+                            <div class="mini-slogan">Оставьте заявку прямо сейчас, и наши эксперты помогут автоматизировать процессы, сэкономить ресурсы и настроить 1С под ваши задачи!</div>
+                        </div>
+                        <div class="contact-info-cards">
+                            <div class="info-card">
+                                <img src="image/phone_phone.png" alt="Телефон" class="info-icon">
+                                <div class="info-content">
+                                    <div class="info-label">Телефон</div>
+                                    <div class="info-value">+7 (347) 200-91-24</div>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <img src="image/email.png" alt="E-mail" class="info-icon">
+                                <div class="info-content">
+                                    <div class="info-label">E-mail</div>
+                                    <div class="info-value">info@ais-itgroup.ru</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Правая колонка: форма -->
+                    <div class="contact-right">
+                        <div class="contact-form">
+                            <h2 class="benefits-title-secondary">Оставить заявку</h2>
+                            <form id="trialForm" class="form-fields">
+                                <div class="form-group">
+                                    <label>Имя <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Телефон <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+7 (000) 000-00-00" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Предпочтительный способ связи</label>
+                                    <select id="contact_method" name="contact_method" required>
+                                        <option value="" disabled selected>Где лучше с вами связаться?</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                        <option value="telegram">Telegram</option>
+                                        <option value="phone">Звонок по телефону</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">
+                                        Я даю своё согласие ООО «ИТ-АРХИТЕКТОР» (ОГРН 1190280015640) и его аффилированным лицам на обработку указанных мной в анкете персональных данных на условиях Политик в целях получения обратной связи по заявке.
+                                    </label>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-primary" id="submitForm">Оставить заявку</button>
+                                </div>
+                                
+                                <input type="text" name="honeypot" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                                <input type="hidden" id="formStartTime" value="">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 <a href="https://it-architector.com/ru" class="grow_link">IT-АРХИТЕКТОР</a></p>
+            <a href="https://it-architector.com/ru/company/politics" class="grow_link">Политики</a> <a href="https://it-architector.com/ru/company/accreditation" class="grow_link">Аккредитованная ИТ компания</a>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх"></button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
